@@ -131,6 +131,136 @@
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <!-- Heading -->
+        <h2 class="section-title">Educations and Organizations</h2>
+        <hr class="section-divider" />
+
+        <!-- Quote -->
+        <blockquote class="section-quote">
+          Knowledge shapes, organization directs – a tandem dance where
+          education orchestrates and organization executes, crafting a
+          harmonious symphony of success.
+        </blockquote>
+
+        <!-- First Education Entry -->
+        <div class="education-entry">
+          <div class="row">
+            <!-- Left Column (Education Details) -->
+            <div class="col-education-details">
+              <h3 class="degree">
+                Matematika dan Ilmu Pengetahuan Alam (MIPA)
+              </h3>
+              <p class="major"><strong>SMAN 1 Palembang</strong></p>
+              <p class="years"><strong>Year:</strong> 2018 - 2021</p>
+              <p class="gpa"><strong>GPA:</strong> 92.44/100</p>
+              <p class="description">
+                Completed high school with a focus on science, achieving a
+                cumulative GPA of 92.44/100. Engaged in various extracurricular
+                activities to enhance teamwork and leadership skills.
+              </p>
+            </div>
+
+            <!-- Right Column (Gallery) -->
+            <div class="col-education-gallery">
+              <div class="gallery-item" ondblclick="openGallery('modal2')">
+                <img src="img/RapidMiner.jpg" alt="Gallery Photo 2" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Education Entry -->
+        <div class="education-entry">
+          <div class="row">
+            <!-- Left Column (Education Details) -->
+            <div class="col-education-details">
+              <h3 class="degree">Informatics Engineering</h3>
+              <p class="major"><strong>Sriwijaya University</strong></p>
+              <p class="years"><strong>Year:</strong> 2021 - Present</p>
+              <p class="gpa"><strong>GPA:</strong> 3.90/4.00</p>
+              <p class="description">
+                Pursuing a degree in Informatics Engineering at Sriwijaya
+                University and currently in the fifth semester, the focus lies
+                on various aspects of computer science, encompassing algorithms,
+                programming, and database management.
+              </p>
+            </div>
+
+            <!-- Right Column (Gallery) -->
+            <div class="col-education-gallery">
+              <div class="gallery-item" ondblclick="openGallery('modal1')">
+                <img src="img/RapidMiner.jpg" alt="Gallery Photo 1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery when Stduy -->
+    <!-- Modal for First Education (Universitas Sriwijaya) -->
+    <div id="modal1" class="education-modal">
+      <span class="education-close" onclick="closeGallery('modal1')"
+        >&times;</span
+      >
+      <div class="education-modal-content">
+        <div class="education-slide">
+          <img
+            src="img/gallery-education/IMG-20190303-WA0140.jpg"
+            alt="Gallery Image 1"
+          />
+        </div>
+        <div class="education-slide">
+          <img
+            src="img/gallery-education/IMG-20191218-WA0000.jpg"
+            alt="Gallery Image 2"
+          />
+        </div>
+        <div class="education-slide">
+          <img src="img/RapidMiner.jpg" alt="Gallery Image 3" />
+        </div>
+        <a class="education-prev" onclick="plusEducationSlides(-1, 'modal1')"
+          >&#10094;</a
+        >
+        <a class="education-next" onclick="plusEducationSlides(1, 'modal1')"
+          >&#10095;</a
+        >
+      </div>
+    </div>
+
+    <!-- Modal for Second Education (SMAN 1 Palembang) -->
+    <div id="modal2" class="education-modal">
+      <span class="education-close" onclick="closeGallery('modal2')"
+        >&times;</span
+      >
+      <div class="education-modal-content">
+        <div class="education-slide">
+          <img
+            src="img/gallery-education/IMG-20200417-WA0075.jpg"
+            alt="Gallery Image 1"
+          />
+        </div>
+        <div class="education-slide">
+          <img
+            src="img/gallery-education/IMG-20210210-WA0083.jpg"
+            alt="Gallery Image 2"
+          />
+        </div>
+        <div class="education-slide">
+          <img src="img\blog\sistem-rekomendasi.jpg" alt="Gallery Image 3" />
+        </div>
+        <a class="education-prev" onclick="plusEducationSlides(-1, 'modal2')"
+          >&#10094;</a
+        >
+        <a class="education-next" onclick="plusEducationSlides(1, 'modal2')"
+          >&#10095;</a
+        >
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="main.js"></script>

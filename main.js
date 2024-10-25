@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     type();
 });
 
-// JavaScript for Modal
+// JavaScript for Modal CV
 document.addEventListener("DOMContentLoaded", function () {
     var modal = document.getElementById("cvModal");
     var btn = document.querySelector(".btn-outline-cv");
@@ -55,3 +55,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 });
+
+// JavaScript for Gallery
+let educationSlideIndex = 1;
+
+function openGallery(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+    showEducationSlides(educationSlideIndex, modalId);
+}
+
+function closeGallery(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+function plusEducationSlides(n, modalId) {
+    showEducationSlides(educationSlideIndex += n, modalId);
+}
+
+function showEducationSlides(n, modalId) {
+    let slides = document.querySelectorAll(`#${modalId} .education-slide`);
+    if (n > slides.length) {
+        educationSlideIndex = 1;
+    }
+    if (n < 1) {
+        educationSlideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[educationSlideIndex - 1].style.display = "block";
+}

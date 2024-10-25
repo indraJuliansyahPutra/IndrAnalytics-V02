@@ -9,7 +9,7 @@ body {
 
 /* Navbar Style */
 .navbar {
-    background: transparent;
+    background: white;
     padding: 20px;
     transition: background 0.3s ease;
 }
@@ -186,11 +186,179 @@ body {
     cursor: pointer;
 }
 
+/* Education Style */
+#education .container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center; 
+    margin-bottom: 10px;
+}
+  
+.section-divider {
+    width: 50%; 
+    margin: 0 auto; 
+    border: 1px solid #ccc; 
+}  
+
+.section-quote {
+    font-style: italic; 
+    text-align: center; 
+    margin: 20px auto; 
+    padding: 10px;
+    color: #555; 
+    max-width: 600px;
+}
+
+/* Education Entry */
+.education-entry {
+    margin-bottom: 60px;
+}
+
+#education .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+  
+/* Left Column: Education Details */
+.col-education-details {
+    flex: 1;
+}
+  
+.degree {
+    font-size: 28px;
+    color: #f9943b;
+    margin-bottom: 5px;
+}
+  
+.major, 
+.years, 
+.gpa {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+  
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Right Column: Gallery */
+.col-education-gallery {
+    flex: 0.4;
+}
+  
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the modal and close button */
+.education-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Ensure modal is above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Dark semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allow scrolling for smaller screens */
+}
+  
+.education-modal-content {
+    position: relative;
+    width: 80%; /* Default width for larger screens */
+    max-width: 700px; /* Max width for larger screens */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.education-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 10000; /* Ensure the close button is above everything */
+    cursor: pointer;
+}
+  
+.education-close:hover,
+.education-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.education-slide {
+    display: none;
+}
+  
+.education-slide img {
+    width: 100%;
+    height: auto;
+}
+  
+  /* For the previous and next buttons */
+.education-prev, .education-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.education-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.education-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* Hover effects */
+.education-prev:hover, .education-next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+
 /* Responsive Style */
 @media (max-width: 576px) {
     /* Navbar Style */
     .navbar {
         padding: 15px;
+        background: transparent;
     }
 
     .navbar .navbar-brand img {
@@ -233,12 +401,72 @@ body {
         padding: 8px 20px;
         font-size: 14px;
     }
+
+    /* Education Section */
+    #education .container {
+        width: 90%;
+        padding: 20px 0;
+    }
+    
+    #education .row {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .education-entry{
+        width: 75%;
+        margin: 20px auto;
+    }
+
+    .degree {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .major, 
+    .years, 
+    .gpa,
+    .description {
+        font-size: 12px;
+    }
+
+    .col-education-gallery {
+        margin-top: 10px;
+    }
+
+    /* Gallery Education */
+    .education-modal-content {
+        width: 95%; 
+        max-width: none; 
+        padding: 10px;
+    }
+  
+    .education-close {
+        font-size: 25px;
+        top: 10px;
+        right: 15px;
+    }
+  
+    .education-prev, .education-next {
+        font-size: 14px; 
+        padding: 12px;
+    }
+    
+    /* Adjust slide images for smaller screens */
+    .education-slide img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
     /* Navbar Style */
     .navbar {
         padding: 15px;
+        background: transparent;
     }
   
     .navbar .navbar-brand img {
@@ -279,12 +507,49 @@ body {
         padding: 10px 25px;
         font-size: 16px;
     }
+
+    /* Education Section */
+    #education .container {
+        width: 90%;
+        padding: 20px 0;
+    }
+    
+    #education .row {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .education-entry{
+        width: 75%;
+        margin: 20px auto;
+    }
+
+    .degree {
+        font-size: 20px;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .major, 
+    .years, 
+    .gpa,
+    .description {
+        font-size: 15px;
+    }
+
+    .col-education-gallery {
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
     /* Navbar Style */
     .navbar {
         padding: 20px;
+        background: transparent;
     }
   
     .navbar .navbar-brand img {
@@ -312,6 +577,42 @@ body {
   
     .hero-section .intro {
         font-size: 17px;
+    }
+
+    /* Education Section */
+    #education .container {
+        width: 90%;
+        padding: 20px 0;
+    }
+    
+    #education .row {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .education-entry{
+        width: 75%;
+        margin: 20px auto;
+    }
+
+    .degree {
+        font-size: 20px;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .major, 
+    .years, 
+    .gpa,
+    .description {
+        font-size: 15px;
+    }
+
+    .col-education-gallery {
+        margin-top: 10px;
     }
 }
 
@@ -351,6 +652,26 @@ body {
     .actions .btn {
         padding: 10px 30px;
         font-size: 18px;
+    }
+
+    /* Education Section */
+    #education .container {
+        width: 70%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .degree {
+        font-size: 22px;
+    }
+
+    .major, 
+    .years, 
+    .gpa,
+    .description {
+        font-size: 16px;
     }
 }
 
