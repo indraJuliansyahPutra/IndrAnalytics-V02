@@ -351,6 +351,100 @@ body {
 .education-prev:hover, .education-next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+/* Website Section */
+#projects {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: white;
+}
+  
+.projects-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+  
+.website-box {
+    margin-bottom: 30px;
+}
+  
+.projects-item {
+    position: relative;
+    overflow: hidden;
+}
+  
+.projects-image {
+    width: 100%; /* Mengisi lebar kolom */
+    aspect-ratio: 3 / 2; /* Mengatur rasio 3:2 */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.projects-item:hover .projects-image {
+    transform: scale(1.1);
+}
+  
+.projects-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projects-info h2{
+    font-size: 20px;
+    color: #f9943b;
+}
+
+.projects-info p{
+    font-size: 15px;
+    font-family: Helvetica;
+    color: #ffdb4f;
+    margin: 5px 10px;
+}
+  
+.projects-item:hover .projects-info {
+    opacity: 1;
+}
+  
+.projects-title {
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+  
+.projects-description {
+    margin-bottom: 20px;
+}
+  
+.hidden-rows {
+    display: none;
+}
+
+#show-more-btn {
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 50px;
+    border-color: #f9943b;
+    color: #f9943b;
+    cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+#show-more-btn:hover {
+    background-color: #f9943b; /* Ganti warna latar belakang saat hover */
+    color: white; /* Ubah warna teks saat hover */
+}
   
 
 /* Responsive Style */
@@ -459,6 +553,11 @@ body {
     .education-slide img {
         max-width: 100%;
         height: auto;
+    }
+
+    /* Project Section */
+    .projects-info h2{
+        font-size: 18px;
     }
 }
 

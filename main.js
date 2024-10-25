@@ -85,3 +85,13 @@ function showEducationSlides(n, modalId) {
     }
     slides[educationSlideIndex - 1].style.display = "block";
 }
+
+// JavaScript untuk Tombol Show More
+document.getElementById("show-more-btn").addEventListener("click", function() {
+  var hiddenRows = document.querySelectorAll('.hidden-rows');
+  hiddenRows.forEach(function(row) {
+    row.style.display = (row.style.display === 'none' || row.style.display === '') ? 'flex' : 'none';
+    row.style.justifyContent = 'space-around'; // ensures space between elements when shown
+  });
+  this.innerText = this.innerText === 'Show More' ? 'Show Less' : 'Show More';
+});
