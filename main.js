@@ -115,3 +115,20 @@ blogCards.forEach((card) => {
     card.querySelector('.blog-card-inner').style.transform = 'rotateY(0deg) rotateX(0deg)';
   });
 });
+
+document.getElementById("toggleButton").addEventListener("click", function () {
+  const hiddenCertificates = document.querySelectorAll(".certificate-card.hidden");
+  const buttonText = this.textContent;
+
+  if (buttonText === "Show More") {
+    hiddenCertificates.forEach(function (certificate) {
+      certificate.style.display = "block";
+    });
+    this.textContent = "Show Less";
+  } else {
+    hiddenCertificates.forEach(function (certificate) {
+      certificate.style.display = "none";
+    });
+    this.textContent = "Show More";
+  }
+});
