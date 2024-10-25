@@ -639,6 +639,72 @@ body {
     background-color: #fa8824;
 }
 
+/* Contact Section */
+#contact {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 250px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+  
+.contact-container {
+    padding: 20px;
+    width: 100%;
+}
+  
+.contact-content {
+    text-align: center; 
+}
+  
+.contact-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+  
+.contact-content p {
+    color: #e1e1e1;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+  
+.contact-button {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+  
+.contact-button:hover {
+    background-color: #333;
+    text-decoration: none;
+}
+  
+.social-icons {
+    margin-top: 10px;
+}
+  
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+  
+.social-icons a:hover {
+    color: #ddd;
+}
+
 /* Responsive Style */
 @media (max-width: 576px) {
     /* Navbar Style */
@@ -768,6 +834,10 @@ body {
     
     .certificate-card {
         width: 100%; 
+    }
+
+    #contact{
+        margin: 0 20px;
     }
 }
 
