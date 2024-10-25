@@ -95,3 +95,23 @@ document.getElementById("show-more-btn").addEventListener("click", function() {
   });
   this.innerText = this.innerText === 'Show More' ? 'Show Less' : 'Show More';
 });
+
+// JavaScript Efek pada Section Blog
+const blogCards = document.querySelectorAll('[data-tilt]');
+
+blogCards.forEach((card) => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateX = (y / rect.height - 0.5) * -30;
+    const rotateY = (x / rect.width - 0.5) * 30;
+
+    card.querySelector('.blog-card-inner').style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.querySelector('.blog-card-inner').style.transform = 'rotateY(0deg) rotateX(0deg)';
+  });
+});
