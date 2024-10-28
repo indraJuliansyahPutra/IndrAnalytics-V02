@@ -21,6 +21,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img\logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -30,6 +34,10 @@
           <img src="img/logo home.svg" alt="Home" style="height: 40px" />
           <!-- Atur tinggi sesuai kebutuhan -->
         </a>
+        <button id="theme-toggle" class="btn-toggle">
+          <i class="fas fa-sun"></i>
+          <!-- Default ikon matahari -->
+        </button>
         <button
           class="navbar-toggler"
           type="button"
@@ -50,7 +58,7 @@
               <a class="nav-link" href="#education">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#website">Portfolio</a>
+              <a class="nav-link" href="#projects">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
@@ -596,7 +604,7 @@
               <h3>TensorFlow Developer Certificate</h3>
               <p>Issued by: TensorFlow</p>
               <p>Date: April 2024 - April 2027</p>
-              <p>Credential ID: 1412/GDSC-UNSRI/SE/VIII/2024</p>
+              <p>Credential ID: 100038940</p>
             </div>
           </div>
         </div>
@@ -674,10 +682,10 @@
           <p>
             Feel free to reach out for collaborations or just a friendly hello
           </p>
-          <p>mrindrajuliansyahputra10@gmail.com</p>
           <a
-            href="mailto:mrindrajuliansyahputra10@gmail.com"
+            href="javascript:void(0);"
             class="contact-button"
+            onclick="togglePopup()"
             >Contact me</a
           >
           <div class="social-icons">
@@ -708,10 +716,32 @@
           </div>
         </div>
       </div>
+
+      <!-- Popup for Contact Options -->
+      <div id="contactPopup" class="contact-popup" onclick="closePopup(event)">
+        <div class="popup-content">
+          <a
+            href="https://wa.me/+6281541114284"
+            target="_blank"
+            class="popup-option"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a
+            href="mailto:mrindrajuliansyahputra10@gmail.com"
+            target="_blank"
+            class="popup-option"
+          >
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script src="modal.js"></script>
+    <script src="toggle.js"></script>
   </body>
 </html>

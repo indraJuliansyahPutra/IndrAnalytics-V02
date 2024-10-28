@@ -1,17 +1,145 @@
+/* Tema Light (default) */
+body.light {
+    background-color: #f5f5f5;
+    background: white
+}
+ 
+body.light .navbar{
+    background: white
+}
+ 
+body.light .hero-section .logo h1{
+    color: #333
+}
+ 
+body.light .hero-section .logo h2{
+    color: #333
+}
+ 
+body.light .hero-section .intro{
+    color: #333
+}
+ 
+body.light .social-icons a{
+    color: #333
+}
+ 
+body.light .section-title{
+    color: #333
+}
+ 
+body.light .section-quote{
+    color: #333
+}
+ 
+body.light section-divider{
+    color: #333
+}
+ 
+body.light .major{
+    color: #333
+}
+ 
+body.light .years{
+    color: #333
+}
+
+body.light .gpa{
+    color: #333
+}
+ 
+body.light .description{
+    color: #333
+}
+
+ /* Tema Dark */
+body.dark {
+    background-color: #f5f5f5;
+    background: #333;
+}
+
+body.dark .navbar{
+    background: #333;
+}
+
+body.dark .hero-section .logo h1{
+    color: white
+}
+
+body.dark .hero-section .logo h2{
+    color: white
+}
+
+body.dark .hero-section .intro{
+    color: white
+}
+
+body.dark .social-icons a{
+    color: white
+}
+
+body.dark .section-title{
+    color: white
+}
+
+body.dark .section-quote{
+    color: white
+}
+
+body.dark section-divider{
+    color: white
+}
+
+body.dark .major, .years, .gpa{
+    color: white
+}
+
+body.dark .description{
+    color: white
+}
+
+/* Tombol Toggle Tema */
+.btn-toggle {
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+body.dark .btn-toggle {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+.btn-toggle:hover {
+    background-color: #ffdb4f;
+    color: #333;
+}
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    background: linear-gradient(to right, #ece9e6, #ffffff);
+    background: #333;
 }
 
 /* Navbar Style */
 .navbar {
-    background: white;
     padding: 20px;
     transition: background 0.3s ease;
+    background: #333;
 }
 
 .navbar-collapse {
@@ -26,7 +154,6 @@ body {
     justify-content: flex-end;
 }
 
-/* Menu Dropdown muncul di sebelah kanan */
 .navbar-nav {
     position: relative;
 }
@@ -57,13 +184,13 @@ body {
 
 /* Main Section */
 .hero-section {
+    min-height: 100vh;
     height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: white;
 }
 
 .hero-section .profile-image {
@@ -94,9 +221,13 @@ body {
 .hero-section .logo h1 {
     font-size: 48px;
     font-weight: 700;
-    color: #333;
+    color: white;
     display: inline-block;
     margin-top: 10px;
+}
+
+.hero-section .logo h2{
+    color: white;
 }
 
 .hero-section .intro {
@@ -106,6 +237,7 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 
 .hero-section .social-icons {
@@ -113,7 +245,7 @@ body {
 }
 
 .hero-section .social-icons a {
-    color: #333;
+    color: white;
     font-size: 24px;
     margin: 0 10px;
 }
@@ -198,12 +330,14 @@ body {
     font-weight: bold;
     text-align: center; 
     margin-bottom: 10px;
+    color: white;
 }
   
 .section-divider {
     width: 50%; 
     margin: 0 auto; 
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+    color: white;
 }  
 
 .section-quote {
@@ -213,6 +347,7 @@ body {
     padding: 10px;
     color: #555; 
     max-width: 600px;
+    color: white;
 }
 
 /* Education Entry */
@@ -243,12 +378,14 @@ body {
 .gpa {
     font-size: 16px;
     margin-bottom: 5px;
+    color: white;
 }
   
 .description {
     font-size: 16px;
     line-height: 1.6;
     margin-top: 10px;
+    color: white;
 }
 
 /* Right Column: Gallery */
@@ -286,7 +423,7 @@ body {
     position: relative;
     width: 80%; 
     max-width: 700px; 
-    background-color: white;
+    background-color: #333;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -350,11 +487,10 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Website Section */
+/* Projects Section */
 #projects {
     padding-top: 0px;
     padding-bottom: 0px;
-    background: white;
 }
   
 .projects-container {
@@ -429,6 +565,47 @@ body {
 .hidden-rows {
     display: none;
 }
+
+/* Tombol khusus di bagian proyek */
+#projects .btn-secondary {
+    font-size: 12px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, #f9943b, #ffdb4f); /* Gradien warna */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek hover */
+#projects .btn-secondary:hover {
+    background: linear-gradient(135deg, #ffdb4f, #f9943b);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+    transform: translateY(-3px); /* Efek "angkat" saat hover */
+}
+
+/* Garis animasi di hover */
+#projects .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffdb4f;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#projects .btn-secondary:hover::before {
+    transform: scaleX(1);
+}
+
 
 #show-more-btn {
     padding: 10px 30px;
@@ -545,19 +722,27 @@ body {
 }
    
 .certificates-section {
-    width: 50%;
+    width: 100%;
+    max-width: 1200px;
     padding: 60px 0;
     text-align: center;
     perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
    
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Mengatur kolom agar fleksibel */
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: transparent;
+    justify-items: center; /* Memposisikan item grid di tengah */
+    width: 100%;
+    max-width: 900px; /* Batasi lebar grid agar lebih simetris di tengah */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
    
 .certificate-card {
@@ -589,7 +774,7 @@ body {
 }
    
 .certificate-front {
-    background-color: #fff;
+    background-color: transparent;
 }
    
 .certificate-front img {
@@ -645,7 +830,7 @@ body {
     height: 250px;
     border-radius: 20px;
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
 }
@@ -704,6 +889,62 @@ body {
 .social-icons a:hover {
     color: #ddd;
 }
+
+/* Popup Styles */
+.contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popup-option i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.popup-option:first-child {
+    background-color: #25d366;
+}
+
+.popup-option:last-child {
+    background-color: #0078ff;
+}
+
+/* Hover effects */
+.popup-option:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color:#d35400;
+}
+
 
 /* Responsive Style */
 @media (max-width: 576px) {
@@ -774,7 +1015,7 @@ body {
     }
 
     .degree {
-        font-size: 16px;
+        font-size: 24px;
         text-align: left;
     }
 
@@ -782,7 +1023,7 @@ body {
     .years, 
     .gpa,
     .description {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .col-education-gallery {
@@ -836,8 +1077,12 @@ body {
         width: 100%; 
     }
 
+    .certificate-front {
+        background-color: transparent;
+    }
+
     #contact{
-        margin: 0 20px;
+        margin: 10px 20px;
     }
 }
 
@@ -907,7 +1152,7 @@ body {
     }
 
     .degree {
-        font-size: 20px;
+        font-size: 24px;
         text-align: left;
         margin-top: 10px;
     }
@@ -938,6 +1183,10 @@ body {
     
     .certificate-card {
         width: 100%;
+    }
+
+    .certificate-front {
+        background-color: transparent;
     }
 }
 
@@ -995,7 +1244,7 @@ body {
     }
 
     .degree {
-        font-size: 20px;
+        font-size: 24px;
         text-align: left;
         margin-top: 10px;
     }
@@ -1026,6 +1275,10 @@ body {
     
     .certificate-card {
         width: 100%;
+    }
+
+    .certificate-front {
+        background-color: transparent;
     }
 }
 
@@ -1099,6 +1352,10 @@ body {
     .certificate-card {
         width: 270px; /* Ukuran tetap untuk desktop */
     }
+
+    .certificate-front {
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 1200px){
@@ -1132,5 +1389,79 @@ body {
     .actions .btn {
         padding: 10px 30px;
         font-size: 18px;
+    }
+
+    .certificate-front {
+        background-color: transparent;
+    }
+}
+
+/* Media query untuk iPad Air 5 atau ukuran layar serupa */
+/* Media query untuk iPad Air 5 atau ukuran layar serupa */
+@media (min-width:820px) and (max-width: 1000px) {
+    /* Mengatur baris pertama agar berada di tengah */
+    #projects .row.text-center:first-of-type {
+        justify-content: center;
+    }
+    
+    /* Memperkecil ukuran proyek agar muat di layar */
+    .website-box {
+        flex: 0 0 48%; /* Membuat setiap proyek mengisi hampir setengah lebar baris */
+        max-width: 48%;
+    }
+
+    .projects-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .projects-item {
+        margin: 10px 0;
+    }
+    /* Mengatur padding container agar lebih kecil */
+    .projects-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* Mengatur lebar item proyek agar sesuai layout yang diinginkan */
+    .projects-container .col-lg-2 {
+        display: none; /* Hilangkan kolom kosong untuk center alignment */
+    }
+
+    .projects-container .col-lg-4,
+    .projects-container .col-md-6 {
+        flex: 0 0 32%; /* Atur lebar kolom agar tiga proyek muat dalam satu baris */
+        max-width: 32%;
+        padding: 5px;
+    }
+
+    /* Perkecil ukuran gambar dan info proyek */
+    .projects-image {
+        aspect-ratio: 3 / 2;
+        height: auto;
+    }
+
+    .projects-info {
+        padding: 5px;
+    }
+
+    .projects-info h2 {
+        font-size: 12px;
+    }
+
+    .projects-info p {
+        font-size: 10px;
+        padding: 0px;
+        margin:0px;
+    }
+
+    #projects .btn-secondary {
+        font-size: 8px;  
+        border-radius: 8px;    /* Atur bentuk sudut */
+    }
+
+    #contact{
+        width: 80%;;
     }
 }
